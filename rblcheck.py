@@ -29,7 +29,7 @@ def load_rbls(rbls_file):
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description='abcc - Automatic Best Connection Chooser')
+        description='IP RBL checker')
 
     parser.add_argument(
         '-i', '--ip', required=False,
@@ -56,7 +56,7 @@ def parse_arguments():
 
 
 def check_ip_on_rbl(ip, rbl):
-    query = reverse_ip(ip) + '.' + rbl
+    query = "{}.{}".format(reverse_ip(ip), rbl)
     try:
         socket.gethostbyname(query)
         return 1

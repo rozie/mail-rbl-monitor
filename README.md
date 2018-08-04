@@ -51,4 +51,4 @@ issues if you find any bugs.
 
 License
 ---------
-See LICENSE file
+See LICENSE file.
